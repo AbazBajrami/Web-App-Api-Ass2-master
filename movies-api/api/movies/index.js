@@ -4,6 +4,10 @@ import uniqid from 'uniqid'
 import movieModel from './movieModel';
 import asyncHandler from 'express-async-handler';
 import { getUpcomingMovies } from '../tmdb-api';
+import { getMovie } from '../tmdb-api';
+import { getMovies } from '../../../reactApp/src/api/movie-api';
+
+
 
 
 const router = express.Router(); 
@@ -21,10 +25,23 @@ router.get('/', asyncHandler(async (req, res) => {
 
     res.status(200).json(returnObject);
 }));
-
+//upcoming
 router.get('/tmdb/upcoming', asyncHandler( async(req, res) => {
     const upcomingMovies = await getUpcomingMovies();
     res.status(200).json(upcomingMovies);
+  }));
+
+//movie
+router.get('/tmdb/movie', asyncHandler( async(req, res) => {
+    const movie = await getMovie();
+    res.status(200).json(movie);
+  }));
+
+//movies
+
+router.get('/tmdb/movies', asyncHandler( async(req, res) => {
+    const movies = await getMovies();
+    res.status(200).json(movies);
   }));
   
 // Get movie details
