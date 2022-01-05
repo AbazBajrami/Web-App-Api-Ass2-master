@@ -24,7 +24,7 @@ npm start
 ```
 
 ## API Configuration
-
+```bat
 REACT_APP_TMDB_KEY=
 FAST_REFRESH=false
 NODE_ENV=development
@@ -33,6 +33,7 @@ HOST=localhost
 MONGO_DB=mongodb://localhost:27017/movies_db
 SEED_DB=false
 SECRET=ilikecake
+```
 
 ## Security and Authentication
 My authentication is done using user front. You can sign up and account using your email, create a username, and password. 
