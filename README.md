@@ -15,7 +15,8 @@ git clone https://github.com/AbazBajrami/Web-App-Api-Ass2-master.git
 followed by installation
 
 ```bat
-cd moviesApp
+cd Web-App-Api-Ass2-master
+cd movies-api
 npm install
 cd ..
 cd reactApp
