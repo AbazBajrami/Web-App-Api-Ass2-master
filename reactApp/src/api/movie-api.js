@@ -26,3 +26,12 @@ export const getMovies = () => {
     }
     ).then(res => res.json());
   };
+
+  export const getFavourites = (username) => {
+    return fetch(
+        `/api/users/${username}/favourites`,{headers: {
+         'Authorization': window.localStorage.getItem('token')
+      }
+    }
+    ).then((res) => res.json());
+  };
